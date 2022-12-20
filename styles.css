@@ -1,0 +1,15 @@
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboard_shown {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-section {
+    padding: 50px;
+}
