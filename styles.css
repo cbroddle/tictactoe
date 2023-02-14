@@ -16,11 +16,23 @@
     border: 1px solid black;
 }
 
-.game_controller {
+.player-choice {
+    transition: none;
+    visibility: hidden;
+    
+}
+
+.show-player-choice {
+    visibility: visible;
     display: flex;
-    padding: 30px 0;
+    
 }
 
 .player-choice > button {
     margin: 0 10px;
+}
+
+.game_controller {
+    display: flex;
+    padding: 30px 0;
 }
