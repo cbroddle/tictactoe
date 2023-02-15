@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.gameboard_shown {
+.gameboard-shown {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -14,6 +14,42 @@
 .grid-section {
     padding: 50px;
     border: 1px solid black;
+}
+
+.grid-section:first-child {
+    border-top: 0;
+    border-left: 0;
+}
+
+.grid-section:nth-child(2){
+    border-top: 0;
+}
+
+.grid-section:nth-child(3){
+    border-top: 0;
+    border-right: 0;
+}
+
+.grid-section:nth-child(4){
+    border-left: 0;
+}
+
+.grid-section:nth-child(6){
+    border-right: 0;
+}
+
+.grid-section:nth-child(7){
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.grid-section:nth-child(8){
+    border-bottom: 0;
+}
+
+.grid-section:nth-child(9){
+    border-right: 0;
+    border-bottom: 0;
 }
 
 .player-choice {
@@ -25,7 +61,6 @@
 .show-player-choice {
     visibility: visible;
     display: flex;
-    
 }
 
 .player-choice > button {

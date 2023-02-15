@@ -5,21 +5,26 @@ const gridPosition = [];
 //Player chooses space on grid
 const grid = document.querySelectorAll('.grid-section');
 const selectButtons = document.querySelector('.player-choice');
+const classes = ['show-player-choice', 'show-player-choice1']
+
+
 grid.forEach((grid) => {
     grid.addEventListener("click",
         () => {
             //display choices X or O
-            selectButtons.classList.toggle("show-player-choice");
+            selectButtons.classList.toggle(...classes);
+        
             //collect grid position
             gridPosition.push(grid.id);
             console.log(gridPosition);
             //Needs to show in space of grid selected, not just position 0
-            
+
             //Push Choice to gameChoices array
             //display last value of gameChoices?
             //grid.innerText = `${gameChoices[gameChoices.length - 1]}`;
         })
 })
+
 
 //All combinations of grid position to win with 3 of a kind in a row
 //Moves can be in any order(ex: 0,1,2 can be 1,0,2...)
@@ -53,7 +58,6 @@ oChoice.addEventListener("click",
         //Display O
         grid.innerText = 'O';
     })
-
 
 //Function to check for winner
 function checkWinner() {
